@@ -17,20 +17,23 @@ export class ContentService {
   mediaUrl: string = 'https://images-api.nasa.gov';
   apiKey: string = '5KiI9eXAw2wTpfXM8diW8D9c6CHothL9lovY11Nd';
 
+
+  /* Dayli Image Nasa */
   imageApod(  ): Observable<apodImage[]>{
     const key: string = this.apiKey;
     const url: string = this.apodImgUrl;
 
     return this.http.get<apodImage[]>( `${ url }${ key }` );
-
   }
 
+  /* Media request */
   media( term: string ): Observable<MediaResponse>{
     const url: string = this.mediaUrl;
 
     return this.http.get<MediaResponse>(`${ url }/asset/${ term }`);
   }
 
+  /* Media by term request */
   mediaSearch( term: string ): Observable<MediaResponse>{
     const url: string = this.mediaUrl;
 

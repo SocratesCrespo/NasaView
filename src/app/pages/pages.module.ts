@@ -17,6 +17,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { MarsComponent } from './home/mars/mars.component';
 import { VideolistComponent } from './home/videolist/videolist.component';
 import { VideoGalleryComponent } from './video-gallery/video-gallery.component';
+import {DialogModule} from 'primeng/dialog';
 
 
 
@@ -41,7 +42,8 @@ import { VideoGalleryComponent } from './video-gallery/video-gallery.component';
     CarouselModule,
     AppRoutingModule,
     InputTextModule,
-    FormsModule
+    FormsModule,
+    DialogModule
   ]
 })
 export class PagesModule { }

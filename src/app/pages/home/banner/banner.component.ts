@@ -15,7 +15,13 @@ export class BannerComponent implements OnInit {
   mediaResult: MediaResponse;
   homeVideoUrl: string = 'http://images-assets.nasa.gov/video/Our Planet Our Home An Earth Day Perspective_S/Our Planet Our Home An Earth Day Perspective_S~orig.mp4';
   video = document.getElementById('home-video');
-  
+
+  /* Modal Window */
+    displayBasic: boolean;
+
+    showBasicDialog() {
+      this.displayBasic = true;
+  }
 
   constructor( private ContentService: ContentService ) {  }
 

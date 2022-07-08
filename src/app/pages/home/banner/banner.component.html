@@ -8,7 +8,22 @@
             <h3 class="text-layout mb-5">
                 Explore the better and lastest content of Nasa's Proyect
             </h3>
-            <button pButton type="button" label="Watch Video" class="p-button-raised p-button-lg principal-button mr-3"></button>
+
+            <!-- Start Modal Window -->
+            <p-dialog header="Our Planet, Our Home: An Earth Day Perspective" [(visible)]="displayBasic" [style]="{width: '50vw'}">
+                <video class="video-banner w-12"
+                        [src]="homeVideoUrl"
+                        controls
+                >
+                Nasa Video
+                </video>
+                <ng-template pTemplate="footer">
+                    <p-button icon="pi pi-check" (click)="displayBasic=false" label="Ok" styleClass="p-button-text"></p-button>
+                </ng-template>
+            </p-dialog>
+             <!-- End Modal Window -->
+
+            <button pButton (click)="showBasicDialog()" type="button" label="Watch Video" class="p-button-raised p-button-lg principal-button mr-3"></button>
             <button pButton type="button" label="View More" class="p-button-secondary p-button-lg secundary-button"></button>
 
         </div>

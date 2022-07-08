@@ -12,6 +12,9 @@ import { SharedModule } from './shared/shared.module';
 /* Prime NG */
 import { MegaMenuModule } from 'primeng/megamenu';
 import { ButtonModule } from 'primeng/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 
 
@@ -26,7 +29,8 @@ import { ButtonModule } from 'primeng/button';
     SharedModule,
     MegaMenuModule,
     HttpClientModule,
-    ButtonModule
+    ButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
