@@ -1,0 +1,16 @@
+.video-gallery
+{
+    height: auto;
+    max-height: 450px;
+    width: 100%;
+}
+
+.d-block
+{
+    display: block;
+}
+
+.d-none
+{
+    display: none;
+}

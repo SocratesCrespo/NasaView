@@ -1,0 +1,31 @@
+<div class="background-layout text-layout p-7">
+    <div class="grid">
+        <div class="col">
+            <h1>Search Videos</h1>
+                <input type="text" pInputText  class="w-12" [(ngModel)]="inputValue" (keyup.enter)="showTerm(inputValue)"/>
+                <button pButton label="Search" type="button" class="p-button-secondary mt-3" (click)="showTerm(inputValue)"></button>
+                <hr class="mt-5">
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="sm:col-6 md:col-4 animate__animated animate__fadeIn" *ngFor="let video of videos">
+            <p-card [header]=" video.data[0].title " [subheader]="video.data[0].photographer" class="" styleClass="p-card-shadow">
+                <ng-template pTemplate="header">
+                    <video class="video-gallery" [src]="mediaUrl + '/video/' + video.data[0].nasa_id + '/' + video.data[0].nasa_id + '~orig.mp4'" controls></video>
+                </ng-template>
+                
+                <ng-template pTemplate="footer">
+                    
+                </ng-template>
+            </p-card>
+        </div>
+    </div>
+
+    
+    
+    <p [class]="showing">No results found</p>
+
+
+</div>
+

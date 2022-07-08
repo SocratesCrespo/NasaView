@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+html
+{
+    overflow-x: hidden;
+}
+
+body
+{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
+    padding: 0;
+}
+
+a
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.background-layout
+{
+    background-color: #1f2d40;
+}
+
+.background-layout-dark
+{
+    background-color: #0f141c;
+}
+
+.text-layout
+{
+    color: #ffffff;
+}

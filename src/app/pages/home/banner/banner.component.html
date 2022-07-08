@@ -1,0 +1,32 @@
+<section class="home-banner overflow-hidden" (window:scroll)="playVideo(video)">
+    <!-- Position Absolute Content Banner Div -->
+    <div class="banner-content grid align-content-center p-4 absolute z-1 m-0">
+        <div class="col-12 md:col-6">
+            <h1 class="text-layout mb-2">
+                Nasa View
+            </h1>
+            <h3 class="text-layout mb-5">
+                Explore the better and lastest content of Nasa's Proyect
+            </h3>
+            <button pButton type="button" label="Watch Video" class="p-button-raised p-button-lg principal-button mr-3"></button>
+            <button pButton type="button" label="View More" class="p-button-secondary p-button-lg secundary-button"></button>
+
+        </div>
+        <div class="col-12 md:col-6">
+    
+        </div>
+    </div>
+    
+    <div class="grid banner relative">
+        <div class="col p-0">
+            <!-- Video Banner -->
+            <video #video class="video-banner" id="home-video"
+            [src]="homeVideoUrl"
+            autoplay="autoplay"
+            >
+            Video no es soportado...
+            </video>
+        </div>
+    </div>
+    
+</section>

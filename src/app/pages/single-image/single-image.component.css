@@ -1,0 +1,25 @@
+a
+{
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: #ffffff !important;
+}
+
+button
+{
+    color: #ffffff !important;
+}
+
+button:hover
+{
+    color: #ffffff !important;
+}
+
+span:hover
+{
+    color: #ffffff !important;
+}
