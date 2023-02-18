@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "520ac83b-941e-45c1-8e51-52ae82db4f97"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "nasaView": {
+    "MyNasa": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -71,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "nasaView:build:production"
+              "browserTarget": "MyNasa:build:production"
             },
             "development": {
-              "browserTarget": "nasaView:build:development"
+              "browserTarget": "MyNasa:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +85,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "nasaView:build"
+            "browserTarget": "MyNasa:build"
           }
         },
         "test": {
@@ -105,5 +108,5 @@
       }
     }
   },
-  "defaultProject": "nasaView"
+  "defaultProject": "MyNasa"
 }
