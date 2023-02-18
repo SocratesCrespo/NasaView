@@ -17,6 +17,12 @@ a
     text-decoration: none;
 }
 
+button span
+{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
 .background-layout
 {
     background-color: #1f2d40;
@@ -30,4 +36,12 @@ a
 .text-layout
 {
     color: #ffffff;
+}
+
+.img-grid
+{
+    border: solid 1px #ffffff3b;
+    padding: 18px 10px;
+    background: #182433;
+    margin: 5px;
 }

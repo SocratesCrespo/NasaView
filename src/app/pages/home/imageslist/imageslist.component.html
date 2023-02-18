@@ -7,12 +7,14 @@
                 <h2 class="text-center mb-7">Images gallery of Nasa</h2>
             </ng-template>
             <ng-template let-car pTemplate="item">
-                <div class="div-image-carousel text-center">
-                    <a [routerLink]="['/image', car.data[0].nasa_id]"><img class="image-carousel w-100" [src]="car.links[0].href" alt=""></a>
+                <div class="img-grid">
+                    <div class="div-image-carousel text-center">
+                        <a [routerLink]="['/image', car.data[0].nasa_id]"><img class="image-carousel w-100" [src]="car.links[0].href" alt=""></a>
+                    </div>
+                    <div class="div-title-carousel text-center">
+                        <a [routerLink]="['/image', car.data[0].nasa_id]"> <h5 class="m-2"> {{ car.data[0].title }} </h5></a>
+                    </div>                
                 </div>
-                <div class="div-title-carousel text-center">
-                    <a [routerLink]="['/image', car.data[0].nasa_id]"> <h5 class="m-2"> {{ car.data[0].title }} </h5></a>
-                </div>                
             </ng-template>
         </p-carousel>
 

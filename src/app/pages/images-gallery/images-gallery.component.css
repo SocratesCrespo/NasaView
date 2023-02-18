@@ -4,3 +4,10 @@
     max-height: 350px;
     width: 100%;
 }
+
+::ng-deep .p-card
+{
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
