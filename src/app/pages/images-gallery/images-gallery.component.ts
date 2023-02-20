@@ -10,6 +10,8 @@ import { ContentService } from 'src/app/services/content.service';
 export class ImagesGalleryComponent implements OnInit {
   inputValue: string = '';
   images: Item[];
+  emptyResult: boolean = false;
+  termNoFound: string = '';
 
   constructor(private contentService: ContentService) { }
 
@@ -19,11 +21,15 @@ export class ImagesGalleryComponent implements OnInit {
   showTerm(term: string){
     this.contentService.mediaSearch( term )
       .subscribe( (images) => {
-        console.log(images);
         let response = images.collection.items.filter(item => item.data[0].media_type == 'image' );
         this.images = response;
-      } );
-      
+        if(response.length == 0){
+          this.emptyResult = true;
+          this.termNoFound = term;
+        } else {
+          this.emptyResult = false;
+        }
+      });
       
   }
 

@@ -41,7 +41,13 @@ button span
 .img-grid
 {
     border: solid 1px #ffffff3b;
+    border-radius: 10px;
     padding: 18px 10px;
     background: #182433;
     margin: 5px;
+}
+
+.img-grid-hover:hover
+{
+    background: #141e2b;
 }

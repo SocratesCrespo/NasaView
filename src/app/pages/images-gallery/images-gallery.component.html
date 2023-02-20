@@ -2,7 +2,7 @@
     <div class="grid">
         <div class="col">
             <h1>Search images</h1>
-                <input type="text" pInputText  class="w-12" [(ngModel)]="inputValue" (keyup.enter)="showTerm(inputValue)"/>
+                <input type="text" pInputText  class="w-12" [(ngModel)]="inputValue" (keyup.enter)="showTerm(inputValue)" #searchinput/>
                 <button pButton label="Search" type="button" class="p-button-secondary mt-3" (click)="showTerm(inputValue)"></button>
                 <hr class="mt-5">
         </div>
@@ -16,17 +16,22 @@
 
     <div class="grid">
         <div class="sm:col-6 md:col-4 animate__animated animate__fadeIn" *ngFor="let image of images">
-            <div class="img-grid">
-                <p-card [header]=" image.data[0].title " [subheader]="image.data[0].photographer" class="" styleClass="p-card-shadow">
-                    <ng-template pTemplate="header">
-                        <a [routerLink]="['/image', image.data[0].nasa_id]"><img [alt]="image.data[0].title" class="image-gallery" [src]="image?.links[0].href"></a>
-                    </ng-template>
-                    
-                    <ng-template pTemplate="footer">
+            <a [routerLink]="['/image', image.data[0].nasa_id]">
+                <div class="img-grid img-grid-hover">
+                    <p-card [header]=" image.data[0].title " [subheader]="image.data[0].photographer" class="" styleClass="p-card-shadow">
+                        <ng-template pTemplate="header">
+                            <a [routerLink]="['/image', image.data[0].nasa_id]"><img [alt]="image.data[0].title" class="image-gallery" [src]="image?.links[0].href"></a>
+                        </ng-template>
                         
-                    </ng-template>
-                </p-card>
-            </div>
+                        <ng-template pTemplate="footer">
+                            
+                        </ng-template>
+                    </p-card>
+                </div>
+            </a>
+        </div>
+        <div *ngIf="emptyResult == true">
+            <h3>Do not results for: {{ termNoFound }}</h3>
         </div>
     </div>
 
