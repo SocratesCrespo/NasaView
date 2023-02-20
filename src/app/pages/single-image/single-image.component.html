@@ -1,20 +1,23 @@
-<div class="grid background-layout text-layout">
-    <div class="col pl-5 pr-5">
-        <h1>{{ singleMediaItem[0]?.data[0].title }}</h1>
+
+<div id="main-single-img" class="background-layout">
+    <div class="grid text-layout">
+        <div class="col pl-5 pr-5">
+            <h1>{{ singleMediaItem[0]?.data[0].title }}</h1>
+        </div>
     </div>
-</div>
-
-<div class="grid background-layout text-layout pr-5 pl-5">
-
-    <div class="sm:col-12 md:col-6 animate__animated animate__fadeIn">
-        <img [src]=" imageUrl?.href " [alt]=" termino " class="w-12">
-    </div>
-
-    <div class="sm:col-12 md:col-6 pl-3 pr-3 align-content-center animate__animated animate__fadeIn">
-        <p> {{ singleMediaItem[0]?.data[0].description }} </p>
-        <p><strong>Location: </strong>{{ singleMediaItem[0]?.data[0].location }}</p>
-        <p><strong>Photographer: </strong>{{ singleMediaItem[0]?.data[0].photographer }}</p>
-        <p><strong>Keywords: </strong>{{ singleMediaItem[0]?.data[0].keywords }}</p>
-        <a [href]="imageUrl?.href" target="_blank" download><button pButton type="button" label="Download Image" class="p-button-raised p-button-lg principal-button mt-3 mb-3 text-layout"></button></a>
+    
+    <div class="grid text-layout p-3 single-img-grid">
+    
+        <div class="sm:col-12 md:col-6 animate__animated animate__fadeIn">
+            <img [src]=" imageUrl?.href " [alt]=" termino " class="w-12">
+        </div>
+    
+        <div class="sm:col-12 md:col-6 pl-3 pr-3 align-content-center animate__animated animate__fadeIn">
+            <p> {{ singleMediaItem[0]?.data[0].description }} </p>
+            <p><strong>Location: </strong>{{ singleMediaItem[0]?.data[0].location }}</p>
+            <p><strong>Photographer: </strong>{{ singleMediaItem[0]?.data[0].photographer }}</p>
+            <p><strong>Keywords: </strong>{{ singleMediaItem[0]?.data[0].keywords }}</p>
+            <a [href]="imageUrl?.href" target="_blank" download><button pButton type="button" label="View full image" class="p-button-raised p-button-md principal-button mt-3 mb-3 text-layout"></button></a>
+        </div>
     </div>
 </div>

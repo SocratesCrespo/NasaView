@@ -19,7 +19,21 @@ button:hover
     color: #ffffff !important;
 }
 
+#main-single-img
+{
+    height: 100vh;
+}
+
 span:hover
 {
     color: #ffffff !important;
+}
+
+.single-img-grid
+{
+    border: solid 1px #ffffff3b;
+    border-radius: 10px;
+    padding: 18px 10px;
+    background: #182433;
+    margin: 10px;
 }
