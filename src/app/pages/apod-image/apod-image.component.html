@@ -1,0 +1,22 @@
+<div class="background-layout text-layout p-7">
+    <div class="img-grid">
+        <div class="grid text-layout">
+            <div class="col pl-5 pr-5">
+                <h1 class="text-center">{{ imgTitle }}</h1>
+                <h3 class="text-center">This is the image of the day</h3>
+            </div>
+        </div>
+        
+        <div class="grid text-layout p-3 single-img-grid">
+        
+            <div class="sm:col-12 md:col-6 animate__animated animate__fadeIn">
+                <img [src]="imageUrl" [alt]="imgTitle" class="w-12">
+            </div>
+        
+            <div class="sm:col-12 md:col-6 pl-3 pr-3 align-content-center animate__animated animate__fadeIn">
+                <p> {{ imgDescription }} </p>
+                <a [href]="imageUrl" target="_blank" download><button pButton type="button" label="View full image" class="p-button-raised p-button-md principal-button mt-3 mb-3 text-white"></button></a>
+            </div>
+        </div>
+    </div>
+</div>
