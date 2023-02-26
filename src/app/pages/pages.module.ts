@@ -18,6 +18,8 @@ import { MarsComponent } from './home/mars/mars.component';
 import { VideolistComponent } from './home/videolist/videolist.component';
 import { VideoGalleryComponent } from './video-gallery/video-gallery.component';
 import {DialogModule} from 'primeng/dialog';
+import { ApodImageComponent } from './apod-image/apod-image.component';
+import { AboutComponent } from './about/about.component';
 
 
 
@@ -33,7 +35,9 @@ import {DialogModule} from 'primeng/dialog';
     MarsComponent,
     VideolistComponent,
     ImagesGalleryComponent,
-    VideoGalleryComponent
+    VideoGalleryComponent,
+    ApodImageComponent,
+    AboutComponent
   ],
   imports: [
     CommonModule,
