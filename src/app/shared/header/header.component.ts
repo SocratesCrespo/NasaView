@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit {
         command: () => window.open('https://mars.nasa.gov/mars2020/')
       },
       {
-        label: 'Apod Image', icon: 'pi pi-fw pi-image', routerLink: '/'
+        label: 'Apod Image', icon: 'pi pi-fw pi-image', routerLink: '/apod-image'
       }
       
   ]
