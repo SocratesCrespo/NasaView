@@ -15,6 +15,7 @@ export class BannerComponent implements OnInit {
   mediaResult: MediaResponse;
   homeVideoUrl: string = 'http://images-assets.nasa.gov/video/Our Planet Our Home An Earth Day Perspective_S/Our Planet Our Home An Earth Day Perspective_S~orig.mp4';
   video = document.getElementById('home-video');
+  mobile: boolean = false;
 
   /* Modal Window */
     displayBasic: boolean;
@@ -27,7 +28,9 @@ export class BannerComponent implements OnInit {
 
   
 ngOnInit(): void {
-   
+  if (window.screen.width <= 768) { 
+    this.mobile = true;
+  }
  }
 
  

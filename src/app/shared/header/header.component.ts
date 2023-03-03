@@ -10,11 +10,19 @@ import { MegaMenuItem } from 'primeng/api';
 })
 export class HeaderComponent implements OnInit {
 
+  mobile: boolean = false;
+  menuOpen: boolean = false;
+
   constructor( public router: Router ) { }
 
   public items: MegaMenuItem[] = [];
 
   ngOnInit(): void {
+   
+    if (window.screen.width <= 768) { 
+      this.mobile = true;
+    }
+   
     this.items = [
       {
         label: 'Home', icon: 'pi pi-home', routerLink: '/'
@@ -33,8 +41,16 @@ export class HeaderComponent implements OnInit {
         label: 'Apod Image', icon: 'pi pi-fw pi-image', routerLink: '/apod-image'
       }
       
-  ]
+    ]
 
+  }
+
+  showMenu(){
+    if( this.menuOpen == false ){
+      this.menuOpen = true;
+    }else{
+      this.menuOpen = false;
+    }
   }
 
 }

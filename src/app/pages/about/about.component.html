@@ -1,4 +1,4 @@
-<div class="background-layout text-layout p-7">
+<div *ngIf="mobile == false" class="background-layout text-layout p-7">
     <div class="img-grid p-3">
         <h1 class="text-center">About the proyect</h1>
         <p class="text-center">This web site was made by Sócrates Crespo with the intention of learning and practicing
@@ -7,6 +7,22 @@
             The page also intends to show free content from NASA to observe the images and videos that NASA shares with
             the community.
 
+            This project is not for commercial purposes, nor is it used for hacking practices or information theft. All
+            the information shown is extracted from the public and official NASA API: <a href="https://api.nasa.gov/">https://api.nasa.gov/</a>
+        </p>
+    </div>
+</div>
+
+<div *ngIf="mobile" class="main-text background-layout text-layout p-3">
+    <div class="img-grid p-3">
+        <h1 class="text-center">About the proyect</h1>
+        <p class="text-center">This web site was made by Sócrates Crespo with the intention of learning and practicing
+            Angular technology, the framework with which this site is made.</p>
+        <p class="text-center">
+            The page also intends to show free content from NASA to observe the images and videos that NASA shares with
+            the community.
+            </p>
+        <p class="text-center">
             This project is not for commercial purposes, nor is it used for hacking practices or information theft. All
             the information shown is extracted from the public and official NASA API: <a href="https://api.nasa.gov/">https://api.nasa.gov/</a>
         </p>

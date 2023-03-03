@@ -1,2 +1,11 @@
-<p-megaMenu [model]="items"></p-megaMenu>
+<div *ngIf="mobile == false" class="desktop-menu">
+    <p-megaMenu [model]="items"></p-megaMenu>
+</div>
+
+<div *ngIf="mobile" class="mobile-menu background-layout text-layout p-3">
+    <i (click)="showMenu()" class="p-menuitem-icon pi pi-bars"></i>
+    <div *ngIf="menuOpen" class="menu-open background-layout text-layout">
+        <p-megaMenu [model]="items"></p-megaMenu>
+    </div>
+</div>
 

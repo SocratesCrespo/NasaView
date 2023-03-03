@@ -1,4 +1,4 @@
-<section class="home-banner overflow-hidden" (window:scroll)="playVideo(video)">
+<section *ngIf="mobile == false" class="home-banner overflow-hidden" (window:scroll)="playVideo(video)">
     <!-- Position Absolute Content Banner Div -->
     <div class="banner-content grid align-content-center p-4 absolute z-1 m-0">
         <div class="col-12 md:col-6">
@@ -41,6 +41,52 @@
             >
             Video no es soportado...
             </video>
+        </div>
+    </div>
+    
+</section>
+
+<section *ngIf="mobile == true" class="home-banner overflow-hidden background-layout" (window:scroll)="playVideo(video)">
+    <!-- Position Absolute Content Banner Div -->
+    <div class="banner-content grid background-layout align-content-center m-0">
+        <div class="grid banner">
+            <div class="col p-0">
+                <!-- Video Banner -->
+                <video #video class="video-banner" id="home-video"
+                [src]="homeVideoUrl"
+                autoplay="autoplay"
+                >
+                Video no es soportado...
+                </video>
+            </div>
+        </div>
+
+        <div class="banner-text col-12 background-layout align-content-center">
+            <h1 class="text-layout my-0">
+                My Nasa
+            </h1>
+            <h3 class="text-layout">
+                Explore the better and lastest content of Nasa's Proyect
+            </h3>
+
+            <!-- Start Modal Window -->
+            <p-dialog header="Our Planet, Our Home: An Earth Day Perspective" [(visible)]="displayBasic" [style]="{width: '50vw'}">
+                <video class="video-banner w-12"
+                        [src]="homeVideoUrl"
+                        controls
+                >
+                Nasa Video
+                </video>
+                <ng-template pTemplate="footer">
+                    <p-button icon="pi pi-check" (click)="displayBasic=false" label="Ok" styleClass="p-button-text"></p-button>
+                </ng-template>
+            </p-dialog>
+             <!-- End Modal Window -->
+            <div class="buttons">
+                <button pButton (click)="showBasicDialog()" type="button" label="Watch Video" class="p-button-raised p-button-lg principal-button mr-3"></button>
+                <button pButton type="button" label="Gallery" class="p-button-secondary p-button-lg secundary-button"></button>
+            </div>
+
         </div>
     </div>
     

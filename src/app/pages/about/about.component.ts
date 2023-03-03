@@ -8,9 +8,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AboutComponent implements OnInit {
 
+  mobile: boolean = false;
+
   constructor( private ActivatedRoute: ActivatedRoute ) { }
 
   ngOnInit(): void {
+    if (window.screen.width <= 768) { 
+      this.mobile = true;
+    }
   }
 
 }

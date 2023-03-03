@@ -51,3 +51,13 @@ button span
 {
     background: #141e2b;
 }
+
+.menu-open ul
+{
+    flex-direction: column;
+}
+
+.menu-open .p-megamenu
+{
+    border: none;
+}
