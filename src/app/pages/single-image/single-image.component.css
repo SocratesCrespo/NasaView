@@ -21,7 +21,7 @@ button:hover
 
 #main-single-img
 {
-    height: 100vh;
+    height: auto;
 }
 
 span:hover

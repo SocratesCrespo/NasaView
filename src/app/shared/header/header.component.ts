@@ -5,13 +5,14 @@ import { MegaMenuItem } from 'primeng/api';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styles: [
-  ]
+  styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
 
   mobile: boolean = false;
   menuOpen: boolean = false;
+  animation: string = 'animate__slideInDown';
+  icon: string = 'pi pi-bars';
 
   constructor( public router: Router ) { }
 
@@ -48,8 +49,10 @@ export class HeaderComponent implements OnInit {
   showMenu(){
     if( this.menuOpen == false ){
       this.menuOpen = true;
+      this.icon = 'pi pi-times';
     }else{
       this.menuOpen = false;
+      this.icon = 'pi pi-bars';
     }
   }
 

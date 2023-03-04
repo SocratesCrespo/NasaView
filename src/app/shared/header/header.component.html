@@ -2,9 +2,11 @@
     <p-megaMenu [model]="items"></p-megaMenu>
 </div>
 
-<div *ngIf="mobile" class="mobile-menu background-layout text-layout p-3">
-    <i (click)="showMenu()" class="p-menuitem-icon pi pi-bars"></i>
-    <div *ngIf="menuOpen" class="menu-open background-layout text-layout">
+<div *ngIf="mobile">
+    <div  class="mobile-menu background-layout text-layout p-3">
+        <i (click)="showMenu()" class="p-menuitem-icon" [ngClass]="icon"></i>
+    </div>
+    <div (click)="showMenu()" *ngIf="menuOpen" class="menu background-layout text-layout animate__animated" [ngClass]="animation">
         <p-megaMenu [model]="items"></p-megaMenu>
     </div>
 </div>
