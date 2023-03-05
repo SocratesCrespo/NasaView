@@ -18,12 +18,12 @@
                 Nasa Video
                 </video>
                 <ng-template pTemplate="footer">
-                    <p-button icon="pi pi-check" (click)="displayBasic=false" label="Ok" styleClass="p-button-text"></p-button>
+                    <p-button icon="pi pi-check" (click)="hideBasicDialog(video)" label="Ok" styleClass="p-button-text"></p-button>
                 </ng-template>
             </p-dialog>
              <!-- End Modal Window -->
 
-            <button pButton (click)="showBasicDialog()" type="button" label="Watch Video" class="p-button-raised p-button-lg principal-button mr-3"></button>
+            <button pButton (click)="showBasicDialog(video)" type="button" label="Watch Video" class="p-button-raised p-button-lg principal-button mr-3"></button>
             <button pButton type="button" label="Gallery" class="p-button-secondary p-button-lg secundary-button"></button>
 
         </div>
@@ -70,7 +70,7 @@
             </h3>
 
             <!-- Start Modal Window -->
-            <p-dialog header="Our Planet, Our Home: An Earth Day Perspective" [(visible)]="displayBasic" [style]="{width: '50vw'}">
+            <p-dialog header="Our Planet, Our Home: An Earth Day Perspective" [(visible)]="displayBasic" [style]="{width: '95%'}">
                 <video class="video-banner w-12"
                         [src]="homeVideoUrl"
                         controls
@@ -78,12 +78,12 @@
                 Nasa Video
                 </video>
                 <ng-template pTemplate="footer">
-                    <p-button icon="pi pi-check" (click)="displayBasic=false" label="Ok" styleClass="p-button-text"></p-button>
+                    <p-button icon="pi pi-check" (click)="hideBasicDialog(video)" label="Ok" styleClass="p-button-text"></p-button>
                 </ng-template>
             </p-dialog>
              <!-- End Modal Window -->
             <div class="buttons">
-                <button pButton (click)="showBasicDialog()" type="button" label="Watch Video" class="p-button-raised p-button-lg principal-button mr-3"></button>
+                <button pButton (click)="showBasicDialog(video)" type="button" label="Watch Video" class="p-button-raised p-button-lg principal-button mr-3"></button>
                 <button pButton type="button" label="Gallery" class="p-button-secondary p-button-lg secundary-button"></button>
             </div>
 

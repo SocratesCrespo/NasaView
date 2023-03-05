@@ -23,7 +23,6 @@ export class VideoGalleryComponent implements OnInit {
 
     this.contentService.mediaSearch( term )
       .subscribe( (videos) => {
-        console.log(videos);
         let response = videos.collection.items.filter(item => item.data[0].media_type == 'video' );
         this.videos = response;
 

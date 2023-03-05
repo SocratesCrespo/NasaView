@@ -68,3 +68,18 @@ button span
   padding: 10px 0;
   font-size: 18px;
 }
+
+.custom-carousel .p-carousel-indicators
+{
+    display: none;
+ }
+
+.custom-carousel .p-carousel-item
+{
+    max-width: 353px;
+}
+
+.custom-carousel img
+{
+    width: 100%;
+}

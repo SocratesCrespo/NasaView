@@ -18,21 +18,29 @@ export class BannerComponent implements OnInit {
   mobile: boolean = false;
 
   /* Modal Window */
-    displayBasic: boolean;
-
-    showBasicDialog() {
-      this.displayBasic = true;
-  }
-
-  constructor( private ContentService: ContentService ) {  }
+  displayBasic: boolean;
 
   
-ngOnInit(): void {
-  if (window.screen.width <= 768) { 
-    this.mobile = true;
+  constructor( private ContentService: ContentService ) {  }
+  
+  
+  ngOnInit(): void {
+    if (window.screen.width <= 768) { 
+      this.mobile = true;
+    }
   }
- }
+  
+  showBasicDialog(video: HTMLMediaElement) {
+    this.displayBasic = true;
+    video.pause();
+  }
 
+  hideBasicDialog(video: HTMLMediaElement){
+    this.displayBasic = false;
+    if( window.pageYOffset == 0 && video.paused ){
+      video.play();
+    }
+  }
  
  playVideo(video: HTMLMediaElement){
 
@@ -51,8 +59,6 @@ ngOnInit(): void {
       (mediaResp) => {
       this.mediaResult = mediaResp;
       this.itemsResult = mediaResp.collection.items;
-
-      console.log(this.mediaResult);
     }
     );
   } */

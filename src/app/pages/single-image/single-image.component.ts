@@ -46,7 +46,6 @@ export class SingleImageComponent implements OnInit {
       .subscribe( single => {
         this.singleMedia = single;
         this.singleMediaItem = single.collection.items.slice(0,12);
-        console.log(this.singleMediaItem);
       });
   }
 

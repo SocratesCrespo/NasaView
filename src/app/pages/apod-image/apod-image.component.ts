@@ -25,7 +25,6 @@ export class ApodImageComponent implements OnInit {
         this.imageUrl = single['url'];
         this.imgDescription = single['explanation'];
         this.imgTitle = single['title'];
-        console.log(single);
       });
   }
 

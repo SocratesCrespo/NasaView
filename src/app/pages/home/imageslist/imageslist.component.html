@@ -1,5 +1,5 @@
 
-<div class="grid background-layout text-layout p-7">
+<div *ngIf="mobile == false" class="grid background-layout text-layout p-7">
     <div class="col-12">
        
         <p-carousel [value]="carsItems" [numVisible]="3" [numScroll]="1">
@@ -13,6 +13,31 @@
                     </div>
                     <div class="div-title-carousel text-center">
                         <a [routerLink]="['/image', car.data[0].nasa_id]"> <h5 class="m-2"> {{ car.data[0].title }} </h5></a>
+                    </div>                
+                </div>
+            </ng-template>
+        </p-carousel>
+
+        <div class="col text-center">
+            <button pButton label="View full gallery" type="button" class="p-button-secondary" [routerLink]="['/images-gallery']"></button>
+        </div>
+
+    </div>
+</div>
+
+<div *ngIf="mobile == true" class="grid background-layout text-layout py-5 carousel-mobile">
+    <div class="col-12">  
+        <p-carousel [value]="carsItems" styleClass="custom-carousel" [numVisible]="1" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+            <ng-template pTemplate="header">
+                <h2 class="text-center mb-7">Images gallery of Nasa</h2>
+            </ng-template>
+            <ng-template let-car pTemplate="item">
+                <div class="img-grid">
+                    <div class="div-image-carousel text-center">
+                        <a [routerLink]="['/image', car.data[0].nasa_id]"><img class="image-carousel" [src]="car.links[0].href" alt=""></a>
+                    </div>
+                    <div class="div-title-carousel text-center">
+                        <a [routerLink]="['/image', car.data[0].nasa_id]"> <h5 class="mt-2"> {{ car.data[0].title }} </h5></a>
                     </div>                
                 </div>
             </ng-template>
