@@ -24,7 +24,7 @@
              <!-- End Modal Window -->
 
             <button pButton (click)="showBasicDialog(video)" type="button" label="Watch Video" class="p-button-raised p-button-lg principal-button mr-3"></button>
-            <button pButton type="button" label="Gallery" class="p-button-secondary p-button-lg secundary-button"></button>
+            <button pButton type="button" label="Gallery" [routerLink]="['/images-gallery']" class="p-button-secondary p-button-lg secundary-button"></button>
 
         </div>
         <div class="col-12 md:col-6">
@@ -84,7 +84,7 @@
              <!-- End Modal Window -->
             <div class="buttons">
                 <button pButton (click)="showBasicDialog(video)" type="button" label="Watch Video" class="p-button-raised p-button-lg principal-button mr-3"></button>
-                <button pButton type="button" label="Gallery" class="p-button-secondary p-button-lg secundary-button"></button>
+                <button pButton type="button" label="Gallery" [routerLink]="['/images-gallery']" class="p-button-secondary p-button-lg secundary-button"></button>
             </div>
 
         </div>
